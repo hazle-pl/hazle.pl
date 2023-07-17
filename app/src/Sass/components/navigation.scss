@@ -1,0 +1,55 @@
+header{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding;
+
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            font-size: 36px;
+        }
+
+        .burger{
+            display: none;
+            background-color: red;
+        }
+    }
+    nav{
+        background-color: pink;
+        display: flex;
+    }
+}
+
+
+//Mobile
+@media (max-width: $mobile-breakpoint) {
+    header{
+        background-color: rgb(0, 255, 102);
+        flex-direction: column;
+    
+        .header-content{
+            display: flex;
+            justify-content: space-between;
+    
+    
+            .burger{
+                display: block;
+            }
+        }
+
+        nav{
+            background-color: pink;
+            align-items: flex-end;
+            flex-direction: column;
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

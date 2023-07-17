@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Home } from './pages/home';
+import { Second } from './pages/second';
+import './Sass/main.scss';
+import { Container } from 'react-bootstrap';
+import { Navigation } from './components/navigation';
 
-function App() {
+const pages = [
+  { label: 'Home', link: '/', visible: true, component: Home, icon: 'dashboard' },
+  { label: 'Second', link: '/Second', visible: true, component: Second, icon: 'list' },
+]
+
+
+export const App: React.FC = () => {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to rDSVSDVeload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React XDwefewqfq3wefDDDDRTHDDX
-        </a>
-      </header>
-    </div>
+    <>
+    <Navigation pages={pages}/>
+    <BrowserRouter>
+          <Switch>
+            {pages.map((page) => (
+              <Route exact path={page.link} key={page.label}>
+                {React.createElement(page.component)}
+              </Route>
+            ))}
+          </Switch>
+    </BrowserRouter>
+    </>
   );
 }
 

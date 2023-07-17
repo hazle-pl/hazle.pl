@@ -1,0 +1,106 @@
+//GLOBAL VARIABLES
+$padding: 15px;
+$transition: 0.25s;
+$gap: 20px;
+$scale: 1.01;
+$radius: 15px;
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+//NEUTRAL BACKGROUND COLORS
+.bg-neutral-100{
+    background-color: $neutral-100;
+}
+.bg-neutral-300{
+    background-color: $neutral-300;
+}
+.bg-neutral-500{
+    background-color: $neutral-500;
+}
+.bg-neutral-700{
+    background-color: $neutral-700;
+}
+.bg-neutral-900{
+    background-color: $neutral-900;
+}
+
+//PRIMARY BACKGROUND COLORS
+.bg-primary-100{
+    background-color: $primary-100;
+}
+.bg-primary-300{
+    background-color: $primary-300;
+}
+.bg-primary-500{
+    background-color: $primary-500;
+}
+.bg-primary-700{
+    background-color: $primary-700;
+}
+.bg-primary-900{
+    background-color: $primary-900;
+}
+
+//SECONDARY BACKGROUND COLORS
+.bg-secondary-100{
+    background-color: $secondary-100;
+}
+.bg-secondary-300{
+    background-color: $secondary-300;
+}
+.bg-secondary-500{
+    background-color: $secondary-500;
+}
+.bg-secondary-700{
+    background-color: $secondary-700;
+}
+.bg-secondary-900{
+    background-color: $secondary-900;
+}
+
+//TERTIARY BACKGROUND COLORS
+.bg-tertiary-100{
+    background-color: $tertiary-100;
+}
+.bg-tertiary-300{
+    background-color: $tertiary-300;
+}
+.bg-tertiary-500{
+    background-color: $tertiary-500;
+}
+.bg-tertiary-700{
+    background-color: $tertiary-700;
+}
+.bg-tertiary-900{
+    background-color: $tertiary-900;
+}
+
+//QUATERNARY BACKGROUND COLORS
+.bg-quaternary-100{
+    background-color: $quaternary-100;
+}
+.bg-quaternary-300{
+    background-color: $quaternary-300;
+}
+.bg-quaternary-500{
+    background-color: $quaternary-500;
+}
+.bg-quaternary-700{
+    background-color: $quaternary-700;
+}
+.bg-quaternary-900{
+    background-color: $quaternary-900;
+}
+
+//ADITIONAL BACKGROUND COLORS
+
+.bg-transparent{
+    background-color: $transparent;
+}
