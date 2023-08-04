@@ -36,6 +36,7 @@ export const Navigation: React.FC<NavigationProps> = ({ pages }) => {
 
   return (
     <header className={isHeaderFixed ? 'fixed' : ''}>
+      <div className="header-wrapper">
       <div className="header-content">
         <div className="logo">HAZLE</div>
         <a className={`burger ${isActive ? 'active' : ''}`} onClick={handleClick}>
@@ -56,6 +57,7 @@ export const Navigation: React.FC<NavigationProps> = ({ pages }) => {
           </a>
         ))}
       </nav>
+      </div>
     </header>
   );
 };

@@ -112,3 +112,21 @@ body{
 .bg-neutral-900{
     color: $neutral-100;
 }
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Optional: Define initial styles for the observed elements */
+  .container * {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+  }
