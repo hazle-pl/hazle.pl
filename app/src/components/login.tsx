@@ -14,22 +14,18 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="Username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+    <>
+    <div className="blob bg-secondary-900 left"></div>
+    <div className="login-form">
+        <h3>Login</h3>
+        <p>Hazle pre-production enviroment</p>
+      <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
       <button onClick={handleLogin}>Login</button>
+      <div className="blob bg-secondary-500 right"></div>
     </div>
+    <div className="blob bg-primary-900 center bottom"></div>
+    </>
   );
 };
 
