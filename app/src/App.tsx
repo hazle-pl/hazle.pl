@@ -25,7 +25,7 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
-      {window.location.href.includes('localhost') && !isLoggedIn ? (
+      {window.location.href.includes('preprod') && !isLoggedIn ? (
         <Login onLogin={handleLogin} />
       ) : (
         <>
