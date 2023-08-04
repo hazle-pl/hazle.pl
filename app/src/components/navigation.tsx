@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 interface NavigationProps {
@@ -13,13 +14,28 @@ interface NavigationProps {
 
 export const Navigation: React.FC<NavigationProps> = ({ pages }) => {
   const [isActive, setIsActive] = useState(false);
+  const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+  const location = useLocation();
 
   const handleClick = () => {
     setIsActive(!isActive);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsHeaderFixed(scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
+    <header className={isHeaderFixed ? 'fixed' : ''}>
       <div className="header-content">
         <div className="logo">HAZLE</div>
         <a className={`burger ${isActive ? 'active' : ''}`} onClick={handleClick}>
@@ -30,7 +46,12 @@ export const Navigation: React.FC<NavigationProps> = ({ pages }) => {
       </div>
       <nav className={` ${isActive ? 'active' : ''}`}>
         {pages.map((page) => (
-          <a key={page.link} href={page.link}>
+          <a
+            key={page.link}
+            href={page.link}
+            className={page.link === location.pathname ? 'active' : ''}
+            onClick={handleClick}
+          >
             {page.label}
           </a>
         ))}
