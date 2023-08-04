@@ -1,33 +1,45 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Navigation } from './components/navigation';
 import { Home } from './pages/home';
 import { Second } from './pages/second';
+import Login from './components/login';
 import './Sass/main.scss';
-import { Container } from 'react-bootstrap';
-import { Navigation } from './components/navigation';
 
 const pages = [
-  { label: 'Home', link: '', visible: true, component: Home, icon: 'dashboard' },
-  { label: 'Second', link: '#work', visible: true, component: Second, icon: 'list' },
-]
+  { label: 'Home', link: '/', visible: true, component: Home, icon: 'ss' },
+  { label: 'Work', link: '/second', visible: true, component: Second, icon: 'ss' },
+];
 
+const App: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    () => localStorage.getItem('isLoggedIn') === 'true' // Initialize with the value from localStorage
+  );
 
-export const App: React.FC = () => {
-  
+  // Function to handle login (You can replace this with your actual login logic)
+  const handleLogin = (username: string, password: string) => {
+    if (username === 'admin' && password === 'admin') {
+      setIsLoggedIn(true);
+      localStorage.setItem('isLoggedIn', 'true'); // Save the login status in localStorage
+    }
+  };
+
   return (
-    <>
-    <Navigation pages={pages}/>
     <BrowserRouter>
+      {window.location.href.includes('preprod') && !isLoggedIn ? (
+        <Login onLogin={handleLogin} />
+      ) : (
+        <>
+          <Navigation pages={pages} />
           <Switch>
             {pages.map((page) => (
-              <Route exact path={page.link} key={page.label}>
-                {React.createElement(page.component)}
-              </Route>
+              <Route exact path={page.link} key={page.label} component={page.component} />
             ))}
           </Switch>
+        </>
+      )}
     </BrowserRouter>
-    </>
   );
-}
+};
 
 export default App;
