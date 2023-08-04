@@ -12,12 +12,15 @@ const pages = [
 ];
 
 const App: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    () => localStorage.getItem('isLoggedIn') === 'true' // Initialize with the value from localStorage
+  );
 
   // Function to handle login (You can replace this with your actual login logic)
   const handleLogin = (username: string, password: string) => {
     if (username === 'admin' && password === 'admin') {
       setIsLoggedIn(true);
+      localStorage.setItem('isLoggedIn', 'true'); // Save the login status in localStorage
     }
   };
 
