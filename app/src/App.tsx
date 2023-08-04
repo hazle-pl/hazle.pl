@@ -13,10 +13,9 @@ const pages = [
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
-    () => localStorage.getItem('isLoggedIn') === 'true' // Initialize with the value from localStorage
+    () => localStorage.getItem('isLoggedIn') === 'true' 
   );
 
-  // Function to handle login (You can replace this with your actual login logic)
   const handleLogin = (username: string, password: string) => {
     if (username === 'admin' && password === 'admin') {
       setIsLoggedIn(true);
@@ -26,7 +25,7 @@ const App: React.FC = () => {
 
   return (
     <BrowserRouter>
-      {window.location.href.includes('preprod') && !isLoggedIn ? (
+      {window.location.href.includes('localhost') && !isLoggedIn ? (
         <Login onLogin={handleLogin} />
       ) : (
         <>
