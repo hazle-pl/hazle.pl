@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
     <section className="bg-neutral-900">
       <div className="content-wrapper">
         <Container>
-          <h2>Our partners</h2>
+          <h2>Our partners preprod</h2>
           <InfiniteGalerry pictures={pictures} />
         </Container>
       </div>
