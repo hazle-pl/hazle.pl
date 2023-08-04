@@ -1,0 +1,23 @@
+.infinity-gallery{
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    height: 150px;
+    position: relative;
+
+
+    img{
+        height: 100px;
+        aspect-ratio: 16 / 9;
+        object-fit: contain;
+        transition: $transition;
+        filter: brightness(0) invert(1);
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

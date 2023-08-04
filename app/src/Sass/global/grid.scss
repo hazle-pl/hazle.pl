@@ -1,10 +1,18 @@
 .container{
     max-width: 1530px;
-    background-color: grey;
     padding: 0 $padding;
+
+    *:not(.blob){
+        position: relative;
+        z-index: 10;
+    }
 }
 section{
     padding: 0 $padding;
+}
+
+section:nth-child(2){
+    padding-top: 120px;
 }
 .content-wrapper{
     max-width: 1920px;

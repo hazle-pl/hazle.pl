@@ -1,8 +1,11 @@
 header{
-    background-color: red;
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 $padding;
+    color: $neutral-100;
+    background-color: $neutral-900;
 
     .header-content{
         display: flex;

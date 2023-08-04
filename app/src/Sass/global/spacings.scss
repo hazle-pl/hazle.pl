@@ -1,0 +1,35 @@
+$spacings: ("0": 0, "1": 10px, "2": 20px, "3": 30px, "4": 60px, "5": 120px);
+
+@each $class, $number in $spacings{
+    .padding-top-#{$class}{
+        padding-top: $number;
+    }
+    .padding-bottom-#{$class}{
+        padding-bottom: $number;
+    }
+    .margin-top-#{$class}{
+        margin-top: $number;
+    }
+    .margin-bottom-#{$class}{
+        margin-bottom: $number;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    $spacings: ("0": 0, "1": 5px, "2": 10px, "3": 20px, "4": 30px, "5": 60px);
+
+    @each $class, $number in $spacings{
+        .padding-top-#{$class}{
+            padding-top: $number;
+        }
+        .padding-bottom-#{$class}{
+            padding-bottom: $number;
+        }
+        .margin-top-#{$class}{
+            margin-top: $number;
+        }
+        .margin-bottom-#{$class}{
+            margin-bottom: $number;
+        }
+    }
+}

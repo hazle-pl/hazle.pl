@@ -7,8 +7,8 @@ import { Container } from 'react-bootstrap';
 import { Navigation } from './components/navigation';
 
 const pages = [
-  { label: 'Home', link: '/', visible: true, component: Home, icon: 'dashboard' },
-  { label: 'Second', link: '/Second', visible: true, component: Second, icon: 'list' },
+  { label: 'Home', link: '', visible: true, component: Home, icon: 'dashboard' },
+  { label: 'Second', link: '#work', visible: true, component: Second, icon: 'list' },
 ]
 
 

@@ -1,0 +1,25 @@
+.blob{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+    filter: blur(150px);
+
+    &.left{
+        left: 0px;
+    }
+    &.center{
+        left: 50%;
+        transform: translate(-50%);
+    }
+    &.right{
+        right: 0px;
+    }
+    &.top{
+        top: 0px;
+    }
+    &.bottom{
+        bottom: 0px;
+    }
+}

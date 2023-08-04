@@ -8,6 +8,7 @@ $radius: 15px;
 body{
     padding: 0;
     margin: 0;
+    background-color: $neutral-900;
 }
 
 ::-webkit-scrollbar {
@@ -103,4 +104,10 @@ body{
 
 .bg-transparent{
     background-color: $transparent;
+}
+
+
+
+.bg-neutral-900{
+    color: $neutral-100;
 }
