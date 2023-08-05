@@ -12,6 +12,9 @@ header{
     &.fixed{
         background-color: $neutral-900;
     }
+    &.hidden{
+        transform: translatey(-100%);
+    }
     .header-wrapper{
         max-width: 1530px;
         margin: auto;
@@ -66,6 +69,9 @@ header{
 @media (max-width: $mobile-breakpoint) {
     header{
         flex-direction: column;
+        &:has(nav.active){
+            background-color: $neutral-900;
+        }
 
         .header-wrapper{
             flex-direction: column;
@@ -77,17 +83,34 @@ header{
         
                 .burger{
                     display: block;
+                    cursor: pointer;
+            
+                    svg{
+                        height: 30px;
+                        fill: $neutral-100;
+                    }
                 }
             }
 
             nav{
-                background-color: pink;
                 align-items: flex-end;
                 flex-direction: column;
                 display: none;
+                gap: 0px;
+                transition: $transition;
+
+                a{
+                    text-align: center;
+                    display: inline-block;
+                    width: 100%;
+                    font-size: 2rem;
+                    padding: $padding;
+                }
 
                 &.active{
-                    display: block;
+                    display: flex;
+                    background-color: $neutral-900;
+                    transform: translate(0px);
                 }
             }
         }
