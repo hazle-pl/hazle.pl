@@ -18,3 +18,9 @@ section:nth-child(2){
     max-width: 1920px;
     margin: auto;
 }
+
+.row{
+    >*{
+        margin-bottom: $padding;
+    }
+}

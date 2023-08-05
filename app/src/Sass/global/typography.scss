@@ -13,101 +13,19 @@ h1{
 h2{
     font-size: 3rem;
     font-weight: 400;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
 }
-
-
-//ICONS
-
-
-    .buisness-values{
-        .icon{
-            display: flex;
-            align-items: center;
-            transition: $transition;
-
-            &:hover{
-                text-decoration: none;
-                transform: scale(1.1);
-            }
-
-            i{
-                font-size: 2rem;
-                border: 2px solid $neutral-500;
-                padding: 20px;
-                border-radius: $radius;
-                position: relative;
-                z-index: 2;
-                color: $neutral-100;
-
-                &::after{
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    left: 0px;
-                    top: 0px;
-                    filter: blur(40px);
-                    display: inline-block;
-                    position: absolute;
-                    z-index: -1;
-                    opacity: 0.5;
-                    background-color: $secondary-500;
-                }
-
-                // &.fa-lightbulb{
-                //     &::after{
-                //         background-color: yellow;
-                //     }
-                // }
-                // &.fa-figma{
-                //     &::after{
-                //         background-color: green;
-                //     }
-                // }
-                // &.fa-code{
-                //     &::after{
-                //         background-color: blue;
-                //     }
-                // }
-                // &.fa-screwdriver-wrench{
-                //     &::after{
-                //         background-color: red;
-                //     }
-                // }
-            }
-
-            &:not(:first-of-type) {
-            
-                    &::before{
-                        content: '';
-                        width: 6vw;
-                        right: 0px;
-                        height: 2px;
-                        background-color: $neutral-500;
-                        display: inline-block;
-                    }
-            }
-            &:not(:last-of-type) {
-                
-                    &::after{
-                        content: '';
-                        width: 6vw;
-                        right: 0px;
-                        height: 2px;
-                        background-color: $neutral-500;
-                        display: inline-block;
-                    }
-            }
-        }
-
-    }
-
+h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0px;
+}
 
 //VARIANTS
 .gradient{
     background: -webkit-linear-gradient(0deg, $secondary-700, $primary-700);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .section-icon{
     display: inline-block;

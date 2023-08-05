@@ -27,25 +27,43 @@ export const Home: React.FC = () => {
       </section>
 
 
-      <section className="bg-neutral-900 padding-top-4 padding-bottom-4 buisness-values">
+      <section className="bg-neutral-900 padding-top-4 padding-bottom-4">
         <div className="content-wrapper">
           <Container>
-            <Row className="justify-content-center">
-              <h2>Complex Service</h2>
-            </Row>
-            <Row className="justify-content-center buisness-values padding-top-3 padding-bottom-3">
-                <a href="#idea" className="icon">
-                  <i className="fa-regular fa-lightbulb"></i>
-                </a>
-                <a href="#design" className="icon">
-                  <i className="fa-brands fa-figma"></i>
-                </a>
-                <a href="#code" className="icon">
-                  <i className="fa-solid fa-code"></i>
-                </a>
-                <a href="#service" className="icon">
-                  <i className="fa-solid fa-screwdriver-wrench"></i>
-                </a>
+            <h2>Our service</h2>
+              <Row className="padding-top-4 padding-bottom-4">
+                <Col lg={3} md={6} xs={12}>
+                  <div className="card margin-top-3 margin-bottom-3">
+                    <div className="title">
+                      <i className="fa-solid fa-globe"></i>
+                      <h3>Web-based apps</h3>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} md={5} xs={12}>
+                <div className="card margin-top-3 margin-bottom-3">
+                    <div className="title">
+                      <i className="fa-solid fa-basket-shopping"></i>
+                      <h3>eCommerce</h3>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} md={6} xs={12}>
+                <div className="card margin-top-3 margin-bottom-3">
+                    <div className="title">
+                      <i className="fa-solid fa-pen-to-square"></i>
+                      <h3>UX/UI</h3>
+                    </div>
+                  </div>
+                </Col>
+                <Col lg={3} md={6} xs={12}>
+                <div className="card margin-top-3 margin-bottom-3">
+                    <div className="title">
+                      <i className="fa-solid fa-toolbox"></i>
+                      <h3>Management</h3>
+                    </div>
+                  </div>
+                </Col>
             </Row>
           </Container>
         </div>
@@ -55,12 +73,12 @@ export const Home: React.FC = () => {
       <section id="idea" className="bg-neutral-900 padding-top-4 padding-bottom-4">
         <div className="content-wrapper">
           <Container>
-            <h2><span className="section-icon"><i className="fa-regular fa-lightbulb"></i></span>Power of idea</h2>
+            <h2>What makes us stand out?</h2>
             <Row>
-              <Col lg={6} md={6} xs={12} className={`service`}>
+              <Col lg={6} md={6} xs={12}>
               <p>At Hazle, we believe in the power of a good idea. It's the spark that sets everything in motion. From captivating designs to functional websites and innovative apps, it all begins with that initial concept. Let us turn your ideas into reality and create something remarkable together.</p>
               </Col>
-              <Col lg={6} md={6} xs={12} className={`service`}>
+              <Col lg={6} md={6} xs={12}>
               <p>At Hazle, we believe in the power of a good idea. It's the spark that sets everything in motion. From captivating designs to functional websites and innovative apps, it all begins with that initial concept. Let us turn your ideas into reality and create something remarkable together.</p>
               </Col>
             </Row>
@@ -74,23 +92,6 @@ export const Home: React.FC = () => {
           <Container>
             <h2>Our Partners</h2>
             <InfinityGalerry pictures={pictures} />
-          </Container>
-        </div>
-      </section>
-
-      {/* Section Service */}
-      <section className="bg-neutral-900 padding-top-4 padding-bottom-4">
-        <div className="content-wrapper">
-          <Container>
-            <h2>Our Service</h2>
-            <Row>
-              <Col lg={8} md={6} xs={12} className={`service`}>
-                At Hazle, we believe in the power of a good idea. It's the spark that sets everything in motion. From captivating designs to functional websites and innovative apps, it all begins with that initial concept. Let us turn your ideas into reality and create something remarkable together.
-              </Col>
-              <Col lg={4} md={6} xs={12} className={`service`}>
-                <div className="card">x</div>
-              </Col>
-            </Row>
           </Container>
         </div>
       </section>
