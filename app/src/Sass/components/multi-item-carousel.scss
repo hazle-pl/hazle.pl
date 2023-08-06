@@ -1,0 +1,38 @@
+.multi-item-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  overflow: 1;
+  flex: 1;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  flex: 0 0 calc(100% / 3); /* Adjust the width based on the number of itemsToShow */
+  padding: 5px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}

@@ -41,6 +41,7 @@ header{
         nav{
             display: flex;
             gap: $gap;
+            padding: $padding;
             align-items: center;
             
             a{

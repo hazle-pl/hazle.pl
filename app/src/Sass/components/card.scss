@@ -1,5 +1,10 @@
 .card{
     background-color: $transparent;
+    border-radius: $radius;
+
+    &.overflow-hidden{
+        overflow: hidden;
+    }
 
 .title{
     display: flex;

@@ -12,6 +12,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -107,7 +111,9 @@ body{
     background-color: $transparent;
 }
 
-
+img{
+    width: 100%;
+}
 
 .bg-neutral-900{
     color: $neutral-100;
