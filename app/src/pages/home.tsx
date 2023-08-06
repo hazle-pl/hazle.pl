@@ -2,12 +2,21 @@ import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import InfinityGalerry from '../components/infinity-gallery';
 import useIntersectionObserver from '../scripts/intersection-observer';
+import MultiItemCarousel from '../components/multi-item-carousel';
+import ContactForm from '../components/contact-form';
 
 export const Home: React.FC = () => {
   const pictures = [
     { src: '/img/logo-superspas.png', alt: 'Superspas' },
     { src: '/img/logo-platinumspas.png', alt: 'Platinum spas' },
     { src: '/img/logo-homedeluxe.webp', alt: 'Home deluxe' },
+  ];
+
+  const carouselData = [
+    { id: 1, content: <img src="https://img.freepik.com/darmowe-wektory/gradientowa-kolekcja-elementow-ui-ux_79603-1923.jpg?w=2000" alt="Image 1" /> },
+    { id: 2, content: <img src="https://cdn.dribbble.com/users/427857/screenshots/14376977/media/c35b2be4b09afcc1d0fadf8ccf783cb4.png" alt="Image 2" /> },
+    { id: 3, content: <img src="https://teleporthq.io/blog/content/images/2022/05/essential-tips-for-ui-builder.png" alt="Image 3" /> },
+    // Add more carousel items here...
   ];
 
   useIntersectionObserver('.container *');
@@ -20,6 +29,7 @@ export const Home: React.FC = () => {
           <Container>
             <div className="blob bg-secondary-700 left"></div>
             <h1>Unleashing<br />Boundless<br /><span className="gradient">Creativity</span></h1>
+            <MultiItemCarousel items={carouselData} itemsToShow={3} />
           </Container>
           <div className="blob bg-primary-900 center"></div>
           <div className="blob bg-secondary-500 right top"></div>
@@ -150,6 +160,20 @@ export const Home: React.FC = () => {
               <div className="blob bg-primary-500 right"></div>
               <Col xl={5} md={6} xs={12}>
                 <img className='full-width' src="img/idea-gif.gif"/>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </section>
+
+      <section id="contact-us" className="bg-neutral-900">
+        <div className="content-wrapper">
+          <Container>
+          <div className="blob bg-secondary-500 left"></div>
+            <h2>Stay in touch</h2>
+            <Row className='margin-top-3 margin-bottom-3 mobile-reverse-column'>
+              <Col xl={7} md={6} xs={12}>
+                <ContactForm />
               </Col>
             </Row>
           </Container>
