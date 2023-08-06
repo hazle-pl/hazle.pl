@@ -19,8 +19,25 @@ section:nth-child(2){
     margin: auto;
 }
 
-.row{
-    >*{
-        margin-bottom: $padding;
+.align-items-center{
+    display: flex;
+    align-items: center;
+}
+.full-width{
+    width: 100%;
+}
+
+
+@media (max-width: $mobile-breakpoint) {
+
+    .row{
+        >*{
+            margin-bottom: $padding;
+        }
+    }
+    
+    .mobile-reverse-column{
+        display: flex;
+        flex-direction: column-reverse;
     }
 }

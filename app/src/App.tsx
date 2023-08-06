@@ -7,8 +7,9 @@ import Login from './components/login';
 import './Sass/main.scss';
 
 const pages = [
-  { label: 'Home', link: '/', visible: true, component: Home, icon: 'ss' },
-  { label: 'Work', link: '/second', visible: true, component: Second, icon: 'ss' },
+  { label: 'Home', link: '/', visible: true, component: Home, icon: '' },
+  { label: 'Work', link: '/second', visible: true, component: Second, icon: '' },
+  { label: 'Contact Us', link: '/contact-us', visible: true, component: Second, icon: '' },
 ];
 
 const App: React.FC = () => {
