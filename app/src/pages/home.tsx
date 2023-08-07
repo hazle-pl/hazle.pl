@@ -168,9 +168,9 @@ export const Home: React.FC = () => {
 
       <section id="contact-us" className="bg-neutral-900">
         <div className="content-wrapper">
-          <Container>
+          <Container  className='margin-top-5 margin-bottom-5'>
           <div className="blob bg-secondary-500 left"></div>
-          <h2>Stay in touch</h2>
+          <h2 className="text-align-center">Message us</h2>
             <Row className='margin-top-3 margin-bottom-3 mobile-reverse-column'>
               <Col xl={5} md={6} xs={12}>
                 <ContactForm />

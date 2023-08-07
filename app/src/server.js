@@ -22,8 +22,8 @@ app.post('/api/contact', async (req, res) => {
     const transporter = nodemailer.createTransport(emailConfig);
 
     const mailOptions = {
-      from: emailConfig.auth.user, // Use the same 'user' from emailConfig
-      to: 'wojtek.117@interia.eu', // Replace with the email where you want to receive the messages
+      from: email, // Use the same 'user' from emailConfig
+      to: 'contact@hazle.pl', // Replace with the email where you want to receive the messages
       subject: `New contact message from ${name}`,
       text: `From: ${name}\nEmail: ${email}\n\nMessage: ${message}`,
     };
