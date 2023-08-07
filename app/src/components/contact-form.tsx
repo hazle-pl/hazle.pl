@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Row } from 'react-bootstrap';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,10 +13,24 @@ const ContactForm: React.FC = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const parentElement = e.target.parentElement;
+    if (parentElement) {
+      parentElement.classList.add('active');
+    }
+  };
+
+  const handleBlur = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const parentElement = e.target.parentElement;
+    if (parentElement && e.target.value === '') {
+      parentElement.classList.remove('active');
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('http://localhost:5000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -35,20 +50,44 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
-      </div>
-      <div>
-        <label>Message:</label>
-        <textarea name="message" value={formData.message} onChange={handleChange} />
-      </div>
-      <button type="submit">Send Message</button>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <Row>
+        <label>Name</label>
+        <input autoComplete="off"
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      </Row>
+      <Row>
+        <label>Email</label>
+        <input
+        autoComplete="off"
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      </Row>
+      <Row>
+        <label>Message</label>
+        <textarea
+        autoComplete="off"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        />
+      </Row>
+      <Row>
+        <button type="submit">Send Message</button>
+      </Row>
     </form>
   );
 };

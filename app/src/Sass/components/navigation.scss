@@ -30,8 +30,10 @@ header{
             padding: 0 $padding;
     
             .logo{
-                font-size: 36px;
-                font-weight: 300;
+                padding: $padding 0;
+                img{
+                    height: 20px;
+                }
             }
     
             .burger{
