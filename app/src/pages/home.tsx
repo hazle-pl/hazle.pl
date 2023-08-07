@@ -170,9 +170,9 @@ export const Home: React.FC = () => {
         <div className="content-wrapper">
           <Container>
           <div className="blob bg-secondary-500 left"></div>
-            <h2>Stay in touch</h2>
+          <h2>Stay in touch</h2>
             <Row className='margin-top-3 margin-bottom-3 mobile-reverse-column'>
-              <Col xl={7} md={6} xs={12}>
+              <Col xl={5} md={6} xs={12}>
                 <ContactForm />
               </Col>
             </Row>

@@ -1,0 +1,42 @@
+.contact-form {
+    .row {
+      position: relative;
+      padding-top: 40px; /* Add extra padding to the top to accommodate the transformed label */
+  
+      label {
+        position: absolute;
+        color: $neutral-100;
+        z-index: 10;
+        display: block;
+        left: $padding;
+        transform: translatey(17px);
+        transition: transform 0.3s ease;
+      }
+  
+      input,textarea {
+        width: 100% !important;
+        z-index: -1;
+        padding: $padding;
+        border-radius: $radius;
+        margin-bottom: $gap;
+        color: $neutral-100;
+        background-color: $transparent;
+        border: 2px solid $neutral-700;
+
+        // &:-internal-autofill-selected{
+        //     background-color: $transparent !important;
+        // }
+      }
+      textarea{
+        min-height: 200px;
+      }
+
+      &.active{
+
+        label{
+            transform: translatey(-30px);
+            transition: transform 0.3s ease;
+        }
+      }
+  }
+}

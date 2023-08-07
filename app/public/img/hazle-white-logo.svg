@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" data-name="Warstwa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.1 65.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m4.8,65.8H0V0h4.8v65.8Zm44.6-31.3H4.2v-4.2h45.1v4.2Zm-.6-34.5h4.8v65.8h-4.8V0Z"/>
+  <path class="cls-1" d="m96.6,0l29.3,65.8h-5.3L92.6,2.9h2.9l-28.1,62.9h-5L91.8,0h4.8Z"/>
+  <path class="cls-1" d="m129.9,65.8v-3.4L176.8,2.4l.5,1.9h-46.8V0h51.4v3.4l-46.8,60-.6-1.9h48.4v4.3h-53Z"/>
+  <path class="cls-1" d="m197.7,65.8V0h4.8v61.5h37.9v4.3h-42.7Z"/>
+  <path class="cls-1" d="m257.5,61.5h40.6v4.3h-45.4V0h44v4.3h-39.2v57.2Zm-.6-31.2h35.6v4.2h-35.6v-4.2Z"/>
+</svg>
