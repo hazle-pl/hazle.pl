@@ -35,5 +35,11 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+app.post('/api/test', async (req, res) => {
+  try {
+    res.send('test')
+  }
+});
+
 const PORT = 5000; // Change this to your desired port number
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
