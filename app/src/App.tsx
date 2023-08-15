@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Navigation } from './components/navigation';
-import { Home } from './pages/home';
-import { Second } from './pages/second';
+import { Footer } from './components/footer';
+import {navigation} from './routes.js';
+import {routes} from './routes.js';
 import Login from './components/login';
 import './Sass/main.scss';
-
-const pages = [
-  { label: 'Home', link: '/', visible: true, component: Home, icon: '' },
-  { label: 'Work', link: '/second', visible: true, component: Second, icon: '' },
-  { label: 'Contact Us', link: '/#contact-us', visible: true, component: Second, icon: '' },
-];
 
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -30,12 +25,13 @@ const App: React.FC = () => {
         <Login onLogin={handleLogin} />
       ) : (
         <>
-          <Navigation pages={pages} />
+          <Navigation pages={navigation} />
           <Switch>
-            {pages.map((page) => (
-              <Route exact path={page.link} key={page.label} component={page.component} />
+            {routes.map((route) => (
+              <Route exact path={route.link} key={route.label} component={route.component} />
             ))}
           </Switch>
+          <Footer />
         </>
       )}
     </BrowserRouter>

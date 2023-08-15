@@ -1,0 +1,47 @@
+footer{
+    color: $neutral-500;
+
+    h3{
+        color: $neutral-100;
+    }
+}
+ul{
+    list-style: none;
+    margin-block-start: 5px;
+    padding-inline-start: 0px;
+    
+    li{
+        a{
+            color: $neutral-500; 
+
+            &:hover{
+                color: $neutral-300;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.social-icons{
+    display: flex;
+    gap: 15%;
+
+    a{
+        color: $neutral-100;
+    }
+}
+.legacy{
+    color: $neutral-500;
+
+    a{
+        color: $neutral-500;
+
+        &:hover{
+            color: $neutral-300;
+            text-decoration: none;
+        }
+    }
+
+    .col{
+        gap: $gap;
+    }
+}

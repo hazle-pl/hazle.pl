@@ -59,6 +59,12 @@ h3{
     }
 
 }
+.privacy{
+    p,li{
+        color: $neutral-500;
+        font-size: 0.8rem
+    }
+}
 
 //Tablet
 @media (max-width: $tablet-breakpoint) {

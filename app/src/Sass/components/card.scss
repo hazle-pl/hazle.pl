@@ -5,6 +5,25 @@
     &.overflow-hidden{
         overflow: hidden;
     }
+    &.code{
+        background-color: $neutral-900;
+        padding: $padding;
+        border: 1px solid $neutral-700;
+
+        p{
+            margin-bottom: 0px;
+
+            .blue{
+                color: steelblue
+            }
+            .red{
+                color: crimson;
+            }
+            .green{
+                color: green;
+            }
+        }
+    }
 
 .title{
     display: flex;

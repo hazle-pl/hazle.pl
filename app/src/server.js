@@ -7,11 +7,10 @@ app.use(express.json());
 app.use(cors());
 
 const emailConfig = {
-  host: "sandbox.smtp.mailtrap.io",
-  port: 2525,
+  service: "Gmail",
   auth: {
-    user: "b6c8b083a36b8f",
-    pass: "63580f8100e650"
+    user: "hazle.poland@gmail.com",
+    pass: "Hazle420!"
   },
 };
 
