@@ -8,8 +8,12 @@ import ContactForm from '../components/contact-form';
 export const Home: React.FC = () => {
   const pictures = [
     { src: '/img/logo-superspas.png', alt: 'Superspas' },
-    { src: '/img/logo-platinumspas.png', alt: 'Platinum spas' },
-    { src: '/img/logo-homedeluxe.webp', alt: 'Home deluxe' },
+    { src: '/img/logo-platinumspas.png', alt: 'Platinum Spas Polska' },
+    { src: '/img/logo-homedeluxe.webp', alt: 'Home-Deluxe Polska' },
+    { src: '/img/logo-awt.png', alt: 'AWT Polska' },
+    { src: '/img/logo-hanscraft.png', alt: 'Hanscraft Polska' },
+    { src: '/img/logo-infra-bruk.png', alt: 'Infra-Bruk' },
+    { src: '/img/logo-bewell.png', alt: 'Bewell Polska' },
   ];
 
   useIntersectionObserver('.container *');
@@ -76,10 +80,10 @@ export const Home: React.FC = () => {
           <div className="blob bg-secondary-700 right"></div>
             <h2>Power of idea</h2>
             <Row className='margin-top-3 margin-bottom-3'>
-              <Col xl={5} md={6} xs={12}>
-                <img className='full-width' src="img/idea-gif.gif"/>
+              <Col xl={6} md={6} xs={12}>
+                <img className='full-width' src="img/idea.png"/>
               </Col>
-              <Col class xl={7} md={6} xs={12}>
+              <Col class xl={6} md={6} xs={12}>
                 <div className="card">
                     <p>At Hazle, we believe in the power of a good idea. It's the spark that sets everything in motion. 
                     From captivating designs to functional websites and innovative apps, it all begins with that initial concept. 
@@ -97,7 +101,7 @@ export const Home: React.FC = () => {
             <div className="blob bg-secondary-500 left"></div>
             <div className="blob bg-primary-700 center"></div>
             <Row className='margin-top-3 margin-bottom-3 mobile-reverse-column'>
-              <Col xl={7} md={6} xs={12}>
+              <Col xl={6} md={6} xs={12}>
                 <div className="card">
                     <p>We understand that great design is the starting point for every successful digital venture.
                        Our team of talented designers is passionate about crafting captivating visuals that set your brand apart. 
@@ -106,8 +110,8 @@ export const Home: React.FC = () => {
                        Let us bring your vision to life through the power of exceptional design..</p>
                   </div>
               </Col>
-              <Col xl={5} md={6} xs={12}>
-                <img className='full-width' src="img/idea-gif.gif"/>
+              <Col xl={6} md={6} xs={12}>
+                <img className='full-width' src="img/design.png"/>
               </Col>
             </Row>
           </Container>
@@ -120,38 +124,35 @@ export const Home: React.FC = () => {
             <div className="blob bg-primary-900 center"></div>
             <div className="blob bg-secondary-500 right"></div>
             <Row className='margin-top-3 margin-bottom-3'>
-              <Col xl={5} md={6} xs={12}>
-                <img className='full-width' src="img/idea-gif.gif"/>
+              <Col xl={6} md={6} xs={12}>
+              <div className="card code">
+                  <p><span className="blue">import </span> <span className="red">React </span> <span className="blue">from </span> <span className="green">'react' </span>;</p>
+                  <br/>
+                  <p><span className="blue">class </span> <span className="red">App </span> <span className="blue">extends </span> <span className="red">React.Component </span> {`{`}</p>
+                  <p>&nbsp;{`handleClick = () => {`}</p>         
+                  <p>&nbsp;&nbsp;<span className="red">alert</span>(<span className="green">"Hello World!"</span>);</p>   
+                  <p>&nbsp;{`}`}</p>   
+                  <br/>
+                  <p>&nbsp;<span className="red">render</span>() {`}`}</p>   
+                  <p>&nbsp;&nbsp;<span className="blue">return </span> {`(`}</p>   
+                  <p>&nbsp;&nbsp;&nbsp;{`<>`}</p>   
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;{`<button`} onClick=<span className="green">{`{this.handleClick}`}</span>{`>Click me</button>`}</p>   
+                  <p>&nbsp;&nbsp;&nbsp;{`</>`}</p>   
+                  <p>&nbsp;&nbsp;{`);`}</p>   
+                  <p>&nbsp;{`}`}</p>   
+                  <p>{`}`}</p>  
+                  <br/> 
+                  <p><span className="blue">export default </span><span className="red">App</span>;</p>  
+
+                </div>
               </Col>
-              <Col xl={7} md={6} xs={12}>
+              <Col xl={6} md={6} xs={12}>
                 <div className="card">
                     <p>We are passionate about coding and creating exceptional websites and mindblowing web apps.
                        Our skilled developers write clean, efficient code to bring your vision to life.
                         From responsive layouts to optimized performance, we craft custom websites that impress and engage your audience.
                         Partner with us to unlock the full potential of your online presence. Let's create something extraordinary together.</p>
                   </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </section>
-
-      <section id="=management" className="bg-neutral-900">
-        <div className="content-wrapper">
-          <Container>
-          <div className="blob bg-secondary-500 left"></div>
-            <h2>Your Reliable Support Partner</h2>
-            <Row className='margin-top-3 margin-bottom-3 mobile-reverse-column'>
-              <Col xl={7} md={6} xs={12}>
-                <div className="card ">
-                    <p>We provide comprehensive technical support and services to ensure the long-term success of your project.
-                       From troubleshooting to updates and maintenance, our dedicated team is here to assist you every step of the way.
-                        Trust us to be your reliable technical support partner.</p>
-                  </div>
-              </Col>
-              <div className="blob bg-primary-500 right"></div>
-              <Col xl={5} md={6} xs={12}>
-                <img className='full-width' src="img/idea-gif.gif"/>
               </Col>
             </Row>
           </Container>
@@ -173,20 +174,6 @@ export const Home: React.FC = () => {
           </Container>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       {/* Section Partners */}
       <section className="bg-neutral-900 padding-top-4 padding-bottom-4">
