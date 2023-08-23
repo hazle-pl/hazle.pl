@@ -159,7 +159,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      <section id="contact-us" className="bg-neutral-900">
+      {/* <section id="contact-us" className="bg-neutral-900">
         <div className="content-wrapper">
           <Container  className='margin-top-5 margin-bottom-5'>
           <div className="blob bg-secondary-700 left"></div>
@@ -173,7 +173,7 @@ export const Home: React.FC = () => {
             </Row>
           </Container>
         </div>
-      </section>
+      </section> */}
 
       {/* Section Partners */}
       <section className="bg-neutral-900 padding-top-4 padding-bottom-4">
